@@ -24,7 +24,7 @@
 # Prior art
 
 -   From my transposer program
-    [*https://sourceforge.net/projects/transposer/*](https://sourceforge.net/projects/transposer/)
+    [Original Transposer software](https://sourceforge.net/projects/transposer/)
 
     -   Use my "art" for transposer for branding
 
