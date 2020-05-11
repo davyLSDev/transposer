@@ -63,7 +63,7 @@ happy birthday \[C\]dear \[Bb\](NAME)
 
 # Musical theory
 
-#Notation standard
+# Notation standard
 
 # Markdown standard
 
