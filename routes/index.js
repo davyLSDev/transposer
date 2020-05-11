@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  // The old command
+  //res.render('index', { title: 'Express' });
+
+  // The new test-friendly command
+  res.render('index', { title: 'transposer' });
 });
 
 module.exports = router;
