@@ -18,7 +18,7 @@
 2. edit indexSpec.js an deposit the following
 
 ```
-t Browser = require('zombie');
+const Browser = require('zombie');
 Browser.localhost('example.com', 3000);
 describe('the landing page', () => {
   let browser;
