@@ -74,6 +74,31 @@ router.get('/', function(req, res, next) {
 module.exports = router;
 ```
 
+One last thing, in order to run the test like "npm test", edit the package.json file to look like:
+
+```
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "jasmine"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  }
+}
+```
+
 
 ## Caveats
 * replace **transposer** with the name of your application you are making
