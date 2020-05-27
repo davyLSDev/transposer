@@ -30,8 +30,8 @@ describe('the landing page', () => {
     browser.assert.text('h1', 'transposer');
   });
 
-  /**
-   * Put future tests here...
-   */
-
+  it('displays the transposer icon', () => {
+    browser.assert.element('header img[src="/images/transposer.png"]');
+  });
+  
 });
