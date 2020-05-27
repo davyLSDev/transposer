@@ -5,8 +5,15 @@ body {
 
 header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  background-color: rgb(37, 37, 236); 
 }
 
+h1 {
+  color: white;
+}
 
 a {
   color: #00B7FF;
