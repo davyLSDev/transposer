@@ -15,7 +15,7 @@
 ## A few more things to get in place (see Dan's first tutorial)
 
 1. touch spec/indexSpec.js
-2. edit indexSpec.js an deposit the following
+2. edit indexSpec.js and deposit the following
 
 ```
 const Browser = require('zombie');
@@ -64,10 +64,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // The old command
-  //res.render('index', { title: 'Express' });
-
-  // The new test-friendly command
   res.render('index', { title: 'transposer' });
 });
 

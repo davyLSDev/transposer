@@ -69,6 +69,11 @@ happy birthday \[C\]dear \[Bb\](NAME)
 
 # Hosted
 
-Free website somewhere
+# Other added package(s)
+* ? jasmine-jquery to allow more testing particularly of the DOM "npm install --save-dev jasmine-jquery"
+    * have to also "install" it on the app? [ref](https://stackoverflow.com/questions/32081864/how-to-add-jquery-to-express-app)
 
-Maybe github?
+# Etc.
+
+* Free website somewhere
+    * Maybe github?
