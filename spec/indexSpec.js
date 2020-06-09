@@ -15,17 +15,15 @@ describe('the landing page', () => {
     });
   });
 
-  /**
-   * Your first test!
+  /*
    *
    * `zombie` has loaded and rendered the page
    * returned by your application. Use `jasmine`
    * and `zombie` to ensure it's doing what you
    * expect.
    *
-   * In this case, I just want to make sure a
-   * page title is displayed.
    */
+
   it('displays the page title', () => {
     browser.assert.text('h1', 'transposer');
   });
@@ -33,5 +31,17 @@ describe('the landing page', () => {
   it('displays the transposer icon', () => {
     browser.assert.element('header img[src="/images/transposer.png"]');
   });
-  
+
+  it('displays original song text area', () => {
+    browser.assert.element('body textarea[name="originalSong"]');
+  });
+
+  it('displays 80 characters for the original song text area', ()=> {
+    browser.assert.element('body textarea[cols="80"]');
+  });
+
+  it('displays 20 rows for the original song text area', ()=> {
+    browser.assert.element('body textarea[rows="20"]');
+  });
+
 });
