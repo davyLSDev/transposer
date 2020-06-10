@@ -32,36 +32,18 @@ describe('the landing page', () => {
     browser.assert.element('header img[src="/images/transposer.png"]');
   });
 
-  it('displays original song text label', () => {
-    browser.assert.text('#originalSong h2', 'original song');
-  });
-
   it('displays original song text area', () => {
+    browser.assert.text('#originalSong h2', 'original song');
     browser.assert.element('#originalSong textarea[name=originalSong]');
+    browser.assert.element('#originalSong textarea[cols="60"]');
+    browser.assert.element('#originalSong textarea[rows="20"]')
   });
-
-  it('displays 80 characters for the song text area', ()=> {
-    browser.assert.element('#originalSong textarea[cols="80"]');
-  });
-
-  it('displays 20 rows for the song text area', ()=> {
-    browser.assert.element('#originalSong textarea[rows="20"]');
-  });
-
+  
 /* How do you keep this DRY? */
-  it('displays transposed song text label', () => {
+  it('displays transposed song area', () => {
     browser.assert.text('#transposedSong h2', "transposed song");
-  });
-
-  it('displays transposed song text area', () => {
     browser.assert.element('#transposedSong textarea[name=transposedSong]');
-  });
-
-  it('displays 80 characters for the transposed song text area', ()=> {
-    browser.assert.element('#transposedSong textarea[cols="80"]');
-  });
-
-  it('displays 20 rows for the transposed song text area', ()=> {
+    browser.assert.element('#transposedSong textarea[cols="60"]');
     browser.assert.element('#transposedSong textarea[rows="20"]');
   });
   
