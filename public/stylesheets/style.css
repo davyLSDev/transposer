@@ -7,14 +7,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  display: flex;
   background-color: rgb(37, 37, 236); 
 }
 
 h1 {
   color: white;
+  text-align: center;
 }
 
 a {
   color: #00B7FF;
 }
+
+#originalSong {
+  background-color: lightgray;
+}
+
+#transposedSong {
+  background-color: grey;
+}
+
