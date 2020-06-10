@@ -14,10 +14,13 @@
     <main>
       <div id="originalSong" class="gridOriginalSong">
         <h2>original song</h2>
-        <textarea name="originalSong" cols="60" rows="20"></textarea>
+        <form action="/" method="post" id="originalSongForm">
+          <textarea name="originalSong" cols="60" rows="20"></textarea>
+        </form> 
       </div>
       <div id="transposedSong" class="gridTransposedSong">
         <h2>transposed song</h2>
+        <input type="submit" value="transpose" form="originalSongForm">
         <textarea name="transposedSong" cols="60" rows="20"></textarea>
       </div>
     </main>

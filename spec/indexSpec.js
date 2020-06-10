@@ -32,7 +32,7 @@ describe('the landing page', () => {
     browser.assert.element('header img[src="/images/transposer.png"]');
   });
 
-  it('displays original song text area', () => {
+  it('displays original song text area form', () => {  
     browser.assert.text('#originalSong h2', 'original song');
     browser.assert.element('#originalSong textarea[name=originalSong]');
     browser.assert.element('#originalSong textarea[cols="60"]');
@@ -41,6 +41,7 @@ describe('the landing page', () => {
   
 /* How do you keep this DRY? */
   it('displays transposed song area', () => {
+    browser.assert.element('input[type=submit]');
     browser.assert.text('#transposedSong h2', "transposed song");
     browser.assert.element('#transposedSong textarea[name=transposedSong]');
     browser.assert.element('#transposedSong textarea[cols="60"]');
