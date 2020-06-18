@@ -1,0 +1,135 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(37, 37, 236); 
+}
+
+h1 {
+  color: white;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.wrapper { 
+  display: grid; 
+  grid-template-columns: repeat(4fr); 
+  grid-auto-rows: 24px;
+  background-color: lightgrey; 
+} 
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Dropdown button */
+.dropdown .dropdown-button {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: blue;
+  padding: 2px 20px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Transpose action button */
+.transpose-button {
+  background-color: #4CAF50; /* Green */
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.hamburger-menu { 
+  grid-column-start: 1; 
+  grid-column-end: 2; 
+  grid-row-start: 1; 
+  grid-row-end: 2;
+}
+
+.original-song-dropdown { 
+  grid-column-start: 2;
+  grid-column-end: 3; 
+  grid-row-start: 1; 
+  grid-row-end: 2;
+}
+
+.transpose-song-dropdown {
+  grid-column-start: 3;
+  grid-column-end: 4; 
+  grid-row-start: 1; 
+  grid-row-end: 2; 
+}
+
+.transpose-button {
+  grid-column-start: 4;
+  grid-column-end: 5; 
+  grid-row-start: 1; 
+  grid-row-end: 2; 
+}
+
+.original-song {
+  grid-column-start: 1; 
+  grid-column-end: 3; 
+  grid-row-start: 2; 
+  grid-row-end: 23;
+  background-color: white; 
+}
+
+.transposed-song {
+  grid-column-start: 3; 
+  grid-column-end: 5; 
+  grid-row-start: 2; 
+  grid-row-end: 23;
+  background-color: whitesmoke;
+}
+
+footer {
+  background-color: lightgrey;
+  text-align: right;
+}

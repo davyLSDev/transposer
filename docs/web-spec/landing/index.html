@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEMPLATE</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+  </head>
+  <body>
+    <header>
+      <img src='graphics/transposer.png'>  
+      <h1>transposer</h1>
+      <!-- place holder for future hamburger menu item -->
+      <p></p>
+    </header>
+    <form class="wrapper">
+      <div class="dropdown">
+        <img src='graphics/hamburger24.png'>
+        <div class="dropdown-content">
+            <a href="#About">about</a>
+            <a href="#help">help</a>
+            <a href="#privacy">privacy and terms</a>
+            <a href="#underline">________________</a>
+            <a href="#feedback">feedback</a>
+            <a href="copyright">copyright</a>
+        </div>
+      </div>  
+      <div class="dropdown">
+        <button class="dropdown-button">original key</button>
+        <div class="dropdown-content">
+            <a href="#C_original">C</a>
+            <a href="#Csharp_Dflat_original">C#, Db</a>
+            <a href="#D_original">D</a>
+            <a href="#Dsharp_Eflat_original">D#, Eb</a>
+            <a href="#E_original">E</a>
+            <a href="#F_original">F</a>
+            <a href="#Fsharp_Gflat_original">F#, Gb</a>
+            <a href="#Gsharp_Aflat_original">G#, Ab</a>
+            <a href="#Asharp_Bflat_original">A#, Bb</a>
+        </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropdown-button">transpose to key</button>
+      <div class="dropdown-content">
+          <a href="#Csharp_Dflat_transpose">C#, Db</a>
+          <a href="#D_transpose">D</a>
+          <a href="#Dsharp_Eflat_transpose">D#, Eb</a>
+          <a href="#E_transpose">E</a>
+          <a href="#F_transpose">F</a>
+          <a href="#Fsharp_Gflat_transpose">F#, Gb</a>
+          <a href="#Gsharp_Aflat_transpose">G#, Ab</a>
+          <a href="#Asharp_Bflat_transpose">A#, Bb</a>
+          <a href="#C_transpose">C</a>
+      </div>
+  </div>
+      <button class="transpose-button">transpose song</button>
+      <textarea class="original-song" type="text" cols=50 rows=20>
+        
+        happy birthday [F]
+
+        [F] Hap [C] py birthday to you
+        [F] happy birthday to you
+        [Bb] happy birthday dear frie-end
+        [F] happy [C] birthday to [F] you
+      </textarea>
+      <textarea class="transposed-song" type="text" cols=50 rows=20>
+        
+        happy birthday [Gb]
+
+        [Gb] Hap [Db] py birthday to you
+        [Gb] happy birthday to you
+        [B] happy birthday dear frie-end
+        [Gb] happy [Db] birthday to [Gb] you
+      </textarea>
+    </form>
+    <footer>
+      <p>Messages in the footer</p>
+    </footer>
+    
+    <!-- likely best near the end see
+      https://stackoverflow.com/questions/5220313/where-should-js-scripts-go-in-an-html-file
+    -->
+    <script type="text/javascript" src="TEMPLATE.js"></script>
+  </body>
+</html>
