@@ -5,8 +5,8 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background-color: rgb(37, 37, 236); 
 }
 
@@ -22,7 +22,7 @@ a {
   display: grid; 
   grid-template-columns: repeat(4fr); 
   grid-auto-rows: 24px;
-  background-color: lightgrey; 
+  background-color: lightsteelblue; 
 } 
 
 .dropdown {
@@ -74,16 +74,7 @@ a {
   z-index: 1;
 }
 
-/* Transpose action button */
-.transpose-button {
-  background-color: #4CAF50; /* Green */
-  border-radius: 8px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
+/* transpose button action space */
 
 .hamburger-menu { 
   grid-column-start: 1; 
@@ -110,7 +101,13 @@ a {
   grid-column-start: 4;
   grid-column-end: 5; 
   grid-row-start: 1; 
-  grid-row-end: 2; 
+  grid-row-end: 2;
+  background-color: #4CAF50; /* Green */
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px; 
 }
 
 .original-song {
@@ -130,6 +127,6 @@ a {
 }
 
 footer {
-  background-color: lightgrey;
+  background-color: lightsteelblue;
   text-align: right;
 }

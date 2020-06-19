@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TEMPLATE</title>
+    <title>transposer</title>
     <link rel="stylesheet" type="text/css" href="style.css"> 
   </head>
   <body>
     <header>
       <img src='graphics/transposer.png'>  
-      <h1>transposer</h1>
-      <!-- place holder for future hamburger menu item -->
-      <p></p>
+      <h1>transposer</h1>    
+      <p></p> <!-- centring the <h1> text might be also accomplished by nesting flexboxes -->
     </header>
     <form class="wrapper">
       <div class="dropdown">
         <img src='graphics/hamburger24.png'>
         <div class="dropdown-content">
-            <a href="#About">about</a>
-            <a href="#help">help</a>
-            <a href="#privacy">privacy and terms</a>
-            <a href="#underline">________________</a>
-            <a href="#feedback">feedback</a>
-            <a href="copyright">copyright</a>
+            <a onclick="bout()">about</a>
+            <a onclick="help()">help</a>
+            <a onclick="privacy()">privacy and terms</a>
+            <a>________________</a>
+            <a onclick="feedback()">feedback</a>
+            <a onclick="copyright()">copyright</a>
         </div>
       </div>  
       <div class="dropdown">
         <button class="dropdown-button">original key</button>
         <div class="dropdown-content">
-            <a href="#C_original">C</a>
-            <a href="#Csharp_Dflat_original">C#, Db</a>
-            <a href="#D_original">D</a>
-            <a href="#Dsharp_Eflat_original">D#, Eb</a>
-            <a href="#E_original">E</a>
-            <a href="#F_original">F</a>
-            <a href="#Fsharp_Gflat_original">F#, Gb</a>
-            <a href="#Asharp_Bflat_original">G</a>
-            <a href="#Gsharp_Aflat_original">G#, Ab</a>
-            <a href="#Asharp_Bflat_original">A</a>
-            <a href="#Asharp_Bflat_original">A#, Bb</a>
-            <a href="#Asharp_Bflat_original">B</a>
+          <a onclick="setSongKey('C')" id="C_original">C</a>
+          <a onclick="setSongKey('C#')">C#, Db</a>
+          <a onclick="setSongKey('D')">D</a>
+          <a onclick="setSongKey('D#')">D#, Eb</a>
+          <a onclick="setSongKey('E')">E</a>
+          <a onclick="setSongKey('F')">F</a>
+          <a onclick="setSongKey('F#')">F#, Gb</a>
+          <a onclick="setSongKey('G')">G</a>
+          <a onclick="setSongKey('G#')">G#, Ab</a>
+          <a onclick="setSongKey('A')">A</a>
+          <a onclick="setSongKey('A#')">A#, Bb</a>
+          <a onclick="setSongKey('B')">B</a>
         </div>
     </div>
     <div class="dropdown">
       <button class="dropdown-button">transpose to key</button>
       <div class="dropdown-content">
-          <a href="#Csharp_Dflat_transpose">C#, Db</a>
-          <a href="#D_transpose">D</a>
-          <a href="#Dsharp_Eflat_transpose">D#, Eb</a>
-          <a href="#E_transpose">E</a>
-          <a href="#F_transpose">F</a>
-          <a href="#Fsharp_Gflat_transpose">F#, Gb</a>
-          <a href="#Asharp_Bflat_original">G</a>
-          <a href="#Gsharp_Aflat_transpose">G#, Ab</a>
-          <a href="#Asharp_Bflat_original">A</a>
-          <a href="#Asharp_Bflat_transpose">A#, Bb</a>
-          <a href="#Asharp_Bflat_original">B</a>
-          <a href="#C_transpose">C</a>
+        <a onclick="setTransposedKey('C')" id="C_original">C</a>
+        <a onclick="setTransposedKey('C#')">C#, Db</a>
+        <a onclick="setTransposedKey('D')">D</a>
+        <a onclick="setTransposedKey('D#')">D#, Eb</a>
+        <a onclick="setTransposedKey('E')">E</a>
+        <a onclick="setTransposedKey('F')">F</a>
+        <a onclick="setTransposedKey('F#')">F#, Gb</a>
+        <a onclick="setTransposedKey('G')">G</a>
+        <a onclick="setTransposedKey('G#')">G#, Ab</a>
+        <a onclick="setTransposedKey('A')">A</a>
+        <a onclick="setTransposedKey('A#')">A#, Bb</a>
+        <a onclick="setTransposedKey('B')">B</a>
       </div>
   </div>
-      <button class="transpose-button">transpose song</button>
-      <textarea class="original-song" type="text" cols=50 rows=20>
+      <button class="transpose-button" type="button" onclick="transpose()">transpose song</button>
+      <!-- if you don't specify type="button", the whole form reloads -->
+      <textarea id="original-text" class="original-song" type="text" cols=50 rows=20>
         
         happy birthday [F]
 
@@ -67,7 +67,7 @@
         [Bb] happy birthday dear frie-end
         [F] happy [C] birthday to [F] you
       </textarea>
-      <textarea class="transposed-song" type="text" cols=50 rows=20>
+      <textarea id="transposed-text" class="transposed-song" type="text" cols=50 rows=20>
         
         happy birthday [Gb]
 
@@ -78,12 +78,11 @@
       </textarea>
     </form>
     <footer>
-      <p>Messages in the footer</p>
+      <p id="status" >Messages in the footer</p>
     </footer>
-    
     <!-- likely best near the end see
       https://stackoverflow.com/questions/5220313/where-should-js-scripts-go-in-an-html-file
     -->
-    <script type="text/javascript" src="TEMPLATE.js"></script>
+    <script type="text/javascript" src="transposer.js"></script>
   </body>
 </html>
