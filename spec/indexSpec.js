@@ -40,7 +40,7 @@ describe('the landing page', () => {
   });
 
   it('displays original song text area form', () => {  
-    browser.assert.text('div.labelOriginal h2', "original song");
+    browser.assert.text('div.labelOriginal p', "original song");
     browser.assert.element('div.originalSong textarea[name=originalSong]');
     browser.assert.element('div.originalSong textarea[cols="60"]');
     browser.assert.element('div.originalSong textarea[rows="24"]')
@@ -49,14 +49,14 @@ describe('the landing page', () => {
 /* How do you keep this DRY? */
   it('displays transposed song area', () => {
     browser.assert.element('div.transposeButton input[type=submit]');
-    browser.assert.text('div.labelTransposed h2', "transposed song");
+    browser.assert.text('div.labelTransposed p', "transposed song");
     browser.assert.element('div.transposedSong textarea[name=transposedSong]');
     browser.assert.element('div.transposedSong textarea[cols="60"]');
     browser.assert.element('div.transposedSong textarea[rows="24"]');
   });
 
   it('displays menu toolbar', () => {
-    browser.assert.element('div.hamburgerDropdown img[src="/images/hamburger48.png"]');
+    browser.assert.element('div.hamburgerDropdown img[src="/images/hamburger24.png"]');
     browser.assert.text('div.songKeyDropdown p', "original key dropdown");
     browser.assert.text('div.transposeKeyDropdown p', "transpose key dropdown");
     browser.assert.element('div.transposeButton input[value="transpose"]');

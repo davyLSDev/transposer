@@ -1,6 +1,21 @@
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  vertical-align: middle;
   background-color: lightblue;
 }
 
@@ -12,63 +27,80 @@ header {
 }
 
 form {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25% ;
+  display: grid; 
+  grid-template-columns: repeat(4fr);
+  grid-auto-rows: auto;
+  grid-auto-rows: 24px;
+  background-color: lightsteelblue;
 }
 
-.labelOriginal {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  background-color: yellow;
-}
-
-.labelTransposed {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 3;
-  grid-column-end: 5;
-  background-color: lightyellow 
+.dropdown {
+  float: left;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hamburgerDropdown {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 2;
-  background-color: blue;
+  text-align: left;
 }
 
 .songKeyDropdown {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   grid-column-start: 2;
   grid-column-end: 3;
-  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .transposeKeyDropdown {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   grid-column-start: 3;
   grid-column-end: 4;
-  background-color: lightgreen;  
+  display: flex;
+  align-items: center;
+  justify-items: auto;
 }
 
 .transposeButton {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   grid-column-start: 4;
   grid-column-end: 5;
-  background-color: greenyellow;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
+  padding: 1px 2px;
+  /* text-align: right; */
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+}
+
+.labelOriginal {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  /* seems no way of centering the text horizontally */
+  background-color: lightgrey;
+}
+
+.labelTransposed {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  /* BOGUS text-align: center; */
+  display: flex;
+  align-items: center;
+  background-color: lightgrey;
 }
 
 .originalSong {
@@ -77,7 +109,7 @@ form {
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 3;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
 }
 
 .transposedSong {
@@ -85,20 +117,7 @@ form {
   grid-row-end: 4;
   grid-column-start: 3;
   grid-column-end: 5;
-  border: 1px solid rgba(0, 0, 0, 0.8); 
-}
-
-h1 {
-  color: white;
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-}
-
-a {
-  color: #00B7FF;
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
 }
 
 textarea {
