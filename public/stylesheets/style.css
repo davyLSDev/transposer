@@ -11,21 +11,81 @@ header {
   background-color: rgb(37, 37, 236); 
 }
 
-main {
+form {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 25% 25% 25% 25% ;
 }
 
-.gridOriginalSong {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 5px;
+.labelOriginal {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: yellow;
 }
 
-.gridTransposedSong {
-  background-color: rgba(255, 255, 255, 0.8);
+.labelTransposed {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: lightyellow 
+}
+
+.hamburgerDropdown {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: blue;
+}
+
+.songKeyDropdown {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: green;
+}
+
+.transposeKeyDropdown {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-color: lightgreen;  
+}
+
+.transposeButton {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  background-color: greenyellow;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.originalSong {
+  width: 100%;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 5px;
+}
+
+.transposedSong {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  border: 1px solid rgba(0, 0, 0, 0.8); 
 }
 
 h1 {
@@ -41,11 +101,9 @@ a {
   color: #00B7FF;
 }
 
-#originalSong {
-  background-color: lightgray;
+textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
 }
-
-#transposedSong {
-  background-color: grey;
-}
-

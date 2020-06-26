@@ -1,3 +1,10 @@
+const original = `Happy birthday to you
+
+[F]Happy birthday to [C]you
+happy birthday to [F]you
+happy birthday [C]dear [Bb](NAME)
+[Bb]happy [F]birthday [C]to [F]you`;
+
 const Browser = require('zombie');
 Browser.localhost('example.com', 3000);
 describe('the landing page', () => {
@@ -33,19 +40,34 @@ describe('the landing page', () => {
   });
 
   it('displays original song text area form', () => {  
-    browser.assert.text('#originalSong h2', 'original song');
-    browser.assert.element('#originalSong textarea[name=originalSong]');
-    browser.assert.element('#originalSong textarea[cols="60"]');
-    browser.assert.element('#originalSong textarea[rows="20"]')
+    browser.assert.text('div.labelOriginal h2', "original song");
+    browser.assert.element('div.originalSong textarea[name=originalSong]');
+    browser.assert.element('div.originalSong textarea[cols="60"]');
+    browser.assert.element('div.originalSong textarea[rows="24"]')
   });
   
 /* How do you keep this DRY? */
   it('displays transposed song area', () => {
-    browser.assert.element('input[type=submit]');
-    browser.assert.text('#transposedSong h2', "transposed song");
-    browser.assert.element('#transposedSong textarea[name=transposedSong]');
-    browser.assert.element('#transposedSong textarea[cols="60"]');
-    browser.assert.element('#transposedSong textarea[rows="20"]');
+    browser.assert.element('div.transposeButton input[type=submit]');
+    browser.assert.text('div.labelTransposed h2', "transposed song");
+    browser.assert.element('div.transposedSong textarea[name=transposedSong]');
+    browser.assert.element('div.transposedSong textarea[cols="60"]');
+    browser.assert.element('div.transposedSong textarea[rows="24"]');
   });
+
+  it('displays menu toolbar', () => {
+    browser.assert.element('div.hamburgerDropdown img[src="/images/hamburger48.png"]');
+    browser.assert.text('div.songKeyDropdown p', "original key dropdown");
+    browser.assert.text('div.transposeKeyDropdown p', "transpose key dropdown");
+    browser.assert.element('div.transposeButton input[value="transpose"]');
+  });
+
+  // it('"transposes" the original song when the transpose button is clicked', done => {
+  //   browser.fill('div.originalSong textarea', original);
+  //   browser.pressButton('transpose', () => {
+  //       browser.assert.text('div.transposedSong textarea', original);
+  //       done();
+  //     });
+  // });  
   
 });

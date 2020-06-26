@@ -6,23 +6,36 @@
   </head>
   <body>
     <header>
-      <img src='/images/transposer.png'>  
+      <img src="/images/transposer.png">  
       <h1><%= title %></h1>
       <!-- place holder for future hamburger menu item -->
       <p></p>
     </header>
-    <main>
-      <div id="originalSong" class="gridOriginalSong">
+    <form action="/transpose" method="post">
+      <div class=labelOriginal>
         <h2>original song</h2>
-        <form action="/" method="post" id="originalSongForm">
-          <textarea name="originalSong" cols="60" rows="20"></textarea>
-        </form> 
       </div>
-      <div id="transposedSong" class="gridTransposedSong">
+      <div class=labelTransposed>
         <h2>transposed song</h2>
-        <input type="submit" value="transpose" form="originalSongForm">
-        <textarea name="transposedSong" cols="60" rows="20"></textarea>
       </div>
-    </main>
+      <div class=hamburgerDropdown>
+        <img src="/images/hamburger48.png">
+      </div>
+      <div class=songKeyDropdown>  
+        <p>original key dropdown</p>
+      </div>
+      <div class=transposeKeyDropdown>
+        <p>transpose key dropdown</p>
+      </div>  
+      <div class=transposeButton>
+        <input type="submit" value="transpose">
+      </div>  
+      <div class="originalSong">
+        <textarea name="originalSong" cols="60" rows="24"></textarea>
+      </div>
+      <div class="transposedSong">
+        <textarea name="transposedSong" cols="60" rows="24" ></textarea>
+      </div>   
+    </form>
   </body>
 </html>
