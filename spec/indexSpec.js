@@ -68,6 +68,10 @@ describe('the landing page', () => {
   //       browser.assert.text('div.transposedSong textarea', original);
   //       done();
   //     });
-  // });  
+  // });
+  
+  it('displays a footer for status messages', () => {
+    browser.assert.element('footer p');
+  });
   
 });
