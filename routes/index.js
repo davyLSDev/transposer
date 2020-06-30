@@ -4,11 +4,8 @@ transposed = ''
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // The old command
-  //res.render('index', { title: 'Express' });
-
   // The new test-friendly command
-  res.render('index', { title: 'transposer' });
+  res.render('index', { title: 'transposer', message: 'transposer messages go here' });
 });
 
 /* POST original song */

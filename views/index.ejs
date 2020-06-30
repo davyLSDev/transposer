@@ -31,14 +31,28 @@
         <input type="submit" value="transpose">
       </div>  
       <div class="originalSong">
-        <textarea name="originalSong" cols="60" rows="24"></textarea>
+        <textarea id="originalSong" name="originalSong" cols="60" rows="24">
+          Happy birthday to you
+
+          [F]Happy birthday to [C]you
+          happy birthday to [F]you
+          happy birthday [C]dear [Bb](NAME)
+          [Bb]happy [F]birthday [C]to [F]you
+        </textarea>
       </div>
       <div class="transposedSong">
-        <textarea class="whitesmoke" name="transposedSong" cols="60" rows="24" color="lightgrey" ></textarea>
+        <textarea class="whitesmoke" name="transposedSong" cols="60" rows="24" color="lightgrey" >
+          Happy birthday to you
+
+          [F]Happy birthday to [C]you
+          happy birthday to [F]you
+          happy birthday [C]dear [Bb](NAME)
+          [Bb]happy [F]birthday [C]to [F]you          
+        </textarea>
       </div>   
     </form>
     <footer>
-      <p class="right">Messages in the footer</p>
+      <p class="right"><%= message %></p>
     </footer>
   </body>
 </html>
