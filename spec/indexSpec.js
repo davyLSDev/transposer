@@ -2,6 +2,9 @@ const original = "Happy birthday to you [F]Happy birthday to [C]you happy birthd
 // just for temporarily testing
 const transposed = original;
 
+var assert=require('assert'); // that I need this is here; https://github.com/visionmedia/expresso/issues/76
+var transpose=require('../public/javascripts/transposer');
+
 const Browser = require('zombie');
 Browser.localhost('example.com', 3000);
 describe('the landing page', () => {
@@ -59,10 +62,14 @@ describe('the landing page', () => {
     browser.assert.element('div.transposeButton input[value="transpose"]');
   });
 
-  it('transposes the song', ()=> {
+  it('transposes a song', ()=> {
   //  browser.pressButton('transpose', () => {
-      browser.assert.text('div.originalSong textarea', original);
-      browser.assert.text('div.transposedSong textarea', transposed);
+    browser.assert.text('div.originalSong textarea', original);
+    browser.assert.text('div.transposedSong textarea', transposed);
+  });
+
+  it('transposes chords', ()=> {
+    expect(transpose.chordTranspose("C","C","C")).toBe("C");
   });
   
   it('displays a footer for status messages', () => {
