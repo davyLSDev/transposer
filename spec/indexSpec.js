@@ -69,7 +69,12 @@ describe('the landing page', () => {
   });
 
   it('transposes chords', ()=> {
+    // testing every combination needs to be done, but how to do it efficiently? Data tables or s/th?
     expect(transpose.chordTranspose("C","C","C")).toBe("C");
+  });
+
+  it('transposes the chords in the entered song', ()=> {
+    
   });
   
   it('displays a footer for status messages', () => {
@@ -78,25 +83,3 @@ describe('the landing page', () => {
   });
   
 });
-
-/* random things that didn't work . . .
-
-it('"transposes" the original song when the transpose button is clicked', done => {
-    browser.fill('#originalSong',  original); */
-  //  browser.evaluate('document.getElementById("originalSong").value=$original');
- 
-    //  document.getElementById("originalSong").value = original;
-  // $('#originalSong').html("this");
-  //browser.fill('textarea[name="originalSong"]',  original);
-  //   browser.pressButton('transpose', () => {
-  //       browser.assert.text('div.transposedSong textarea', original);
-  //       done();
-  //     });
-  //  });
-
-  /* Why should this work?
-  it('transposes the song', ()=> {
-    browser.pressButton('transpose', () => {
-      browser.assert.text('div.transposedSong textarea', 'some text');
-    });
-  }); */
