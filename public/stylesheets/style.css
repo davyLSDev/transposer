@@ -30,7 +30,7 @@ header {
   background-color: rgb(37, 37, 236); 
 }
 
-form {
+main {
   display: grid; 
   grid-template-columns: repeat(4fr);
   grid-auto-rows: auto;
