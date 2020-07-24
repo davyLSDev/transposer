@@ -3,7 +3,7 @@ const original = "Happy birthday to you [F]Happy birthday to [C]you happy birthd
 const transposed = original;
 
 var assert=require('assert'); // that I need this is here; https://github.com/visionmedia/expresso/issues/76
-var transpose=require('../public/javascripts/transposer');
+var transpose=require('../public/transposer');
 
 const Browser = require('zombie');
 Browser.localhost('example.com', 3000);
