@@ -27,6 +27,7 @@ npm test
 ```
 npm start
 ```
+Now, simply point your browser to "localhost:3000"
 
 # More documentation
 
