@@ -5,7 +5,8 @@ transposed = ''
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // The new test-friendly command
-  res.render('index', { title: 'transposer', message: 'transposer messages go here' });
+  res.render('index', { title: 'transposer'});
+  // , message: 'transposer messages go here' });
 });
 
 /* POST original song */
