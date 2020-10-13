@@ -7,7 +7,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(37, 37, 236); 
+  background-color: rgb(37, 37, 236);
 }
 
 h1 {
@@ -18,12 +18,12 @@ a {
   color: #00B7FF;
 }
 
-.wrapper { 
-  display: grid; 
-  grid-template-columns: repeat(4fr); 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4fr);
   grid-auto-rows: 24px;
-  background-color: lightsteelblue; 
-} 
+  background-color: lightsteelblue;
+}
 
 .dropdown {
   float: left;
@@ -59,7 +59,7 @@ a {
 .dropdown-content a:hover {
   background-color: #ddd;
 }
-  
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
@@ -76,52 +76,52 @@ a {
 
 /* transpose button action space */
 
-.hamburger-menu { 
-  grid-column-start: 1; 
-  grid-column-end: 2; 
-  grid-row-start: 1; 
+.hamburger-menu {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
   grid-row-end: 2;
 }
 
-.original-song-dropdown { 
+.original-song-dropdown {
   grid-column-start: 2;
-  grid-column-end: 3; 
-  grid-row-start: 1; 
+  grid-column-end: 3;
+  grid-row-start: 1;
   grid-row-end: 2;
 }
 
 .transpose-song-dropdown {
   grid-column-start: 3;
-  grid-column-end: 4; 
-  grid-row-start: 1; 
-  grid-row-end: 2; 
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .transpose-button {
   grid-column-start: 4;
-  grid-column-end: 5; 
-  grid-row-start: 1; 
+  grid-column-end: 5;
+  grid-row-start: 1;
   grid-row-end: 2;
   background-color: #4CAF50; /* Green */
   border-radius: 8px;
   color: white;
   text-align: center;
   text-decoration: none;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 .original-song {
-  grid-column-start: 1; 
-  grid-column-end: 3; 
-  grid-row-start: 2; 
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
   grid-row-end: 23;
-  background-color: white; 
+  background-color: white;
 }
 
 .transposed-song {
-  grid-column-start: 3; 
-  grid-column-end: 5; 
-  grid-row-start: 2; 
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
   grid-row-end: 23;
   background-color: whitesmoke;
 }

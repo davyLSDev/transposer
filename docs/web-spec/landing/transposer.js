@@ -32,12 +32,12 @@ function transpose() {
 
 function setSongKey(key) {
     songKey = key;
-  document.getElementById("status").innerHTML = "original song key of " + songKey + 
-  " and " + "transpose key of " + transposedKey + " selected";
+    document.getElementById("status").innerHTML = "original song key of " + songKey +
+    " and " + "transpose key of " + transposedKey + " selected";
 }
 
 function setTransposedKey(key) {
     transposedKey = key;
-  document.getElementById("status").innerHTML = "original song key of " + songKey + 
-  " and " + "transpose key of " + transposedKey + " selected";
+    document.getElementById("status").innerHTML = "original song key of " + songKey +
+    " and " + "transpose key of " + transposedKey + " selected";
 }

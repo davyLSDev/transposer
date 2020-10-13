@@ -2,12 +2,12 @@
 <html>
   <head>
     <title>transposer</title>
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <header>
-      <img src='graphics/transposer.png'>  
-      <h1>transposer</h1>    
+      <img src='graphics/transposer.png'>
+      <h1>transposer</h1>
       <p></p> <!-- centring the <h1> text might be also accomplished by nesting flexboxes -->
     </header>
     <form class="wrapper">
@@ -21,7 +21,7 @@
             <a onclick="feedback()">feedback</a>
             <a onclick="copyright()">copyright</a>
         </div>
-      </div>  
+      </div>
       <div class="dropdown">
         <button class="dropdown-button">original key</button>
         <div class="dropdown-content">
@@ -59,7 +59,7 @@
       <button class="transpose-button" type="button" onclick="transpose()">transpose song</button>
       <!-- if you don't specify type="button", the whole form reloads -->
       <textarea id="original-text" class="original-song" type="text" cols=50 rows=20>
-        
+
         happy birthday [F]
 
         [F] Hap [C] py birthday to you
@@ -68,7 +68,7 @@
         [F] happy [C] birthday to [F] you
       </textarea>
       <textarea id="transposed-text" class="transposed-song" type="text" cols=50 rows=20>
-        
+
         happy birthday [Gb]
 
         [Gb] Hap [Db] py birthday to you
